@@ -1,7 +1,9 @@
 Goline Naver Line for Linux
 --------------------
 
-Programming Language: Go
+![Screenshot](https://raw.githubusercontent.com/CaryLorrk/goline/master/doc/screenshot.png)
+
+rogramming Language: Go
 
 Libraries: 
 * [Go-Gtk](https://github.com/mattn/go-gtk/)
