@@ -116,7 +116,7 @@ func (self *ChatWindow) setupUI() {
 }
 
 func (self *ChatWindow) setupWindow() {
-	self.Window.SetTitle("Line - " + self.Entity.GetName())
+	self.Window.SetTitle(self.Entity.GetName())
 	self.Window.SetPosition(gtk.WIN_POS_MOUSE)
 	self.Window.Resize(400, 500)
 	self.Window.Connect("destroy", func() {
