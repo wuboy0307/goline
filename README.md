@@ -7,6 +7,7 @@ rogramming Language: Go
 
 Libraries: 
 * [Go-Gtk](https://github.com/mattn/go-gtk/)
+* [Thrift](http://git.apache.org/thrift.git/)
 
 
 Path:  
