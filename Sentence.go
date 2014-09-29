@@ -7,6 +7,7 @@ import (
 
 	"github.com/mattn/go-gtk/gdk"
 	"github.com/mattn/go-gtk/gtk"
+	"github.com/mattn/go-gtk/pango"
 )
 
 type Sentence struct {
@@ -303,6 +304,7 @@ func (self *Sentence) handleText(text string, color *gdk.Color) {
 		label.ModifyFG(gtk.STATE_NORMAL, color)
 	}
 	label.SetLineWrap(true)
+	label.SetUseLineWrapMode(pango.WRAP_CHAR)
 	label.SetSelectable(true)
 	self.Widget = label
 }
