@@ -15,14 +15,14 @@ Runtime Dependency: GTK 2.0
 
 TODO:
 1. Send File
-1. Thumbnail
-1. File Crypto
-1. Send Sticker
-1. History
-1. Search
-1. File Extension
-1. More MIME Type
-1. Auto Sync Friends
+2. Thumbnail
+3. File Crypto
+4. Send Sticker
+5. History
+6. Search
+7. File Extension
+8. More MIME Type
+9. Auto Sync Friends
 
 Reference:
 * [Protocol](http://altrepo.eu/git/line-protocol.git)
