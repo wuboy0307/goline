@@ -100,9 +100,6 @@ func (self *MainWindow) runPoll() {
 			return
 		default:
 			operations := self.fetchOperations()
-			if operations != nil {
-				fmt.Println(operations)
-			}
 			for _, operation := range operations {
 				self.reconnect = 0
 				message := operation.GetMessage()
