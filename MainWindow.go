@@ -100,14 +100,25 @@ func (self *MainWindow) runPoll() {
 			return
 		default:
 			operations := self.fetchOperations()
+			if operations != nil {
+				fmt.Println(operations)
+			}
 			for _, operation := range operations {
 				self.reconnect = 0
 				message := operation.GetMessage()
-				switch operation.GetTypeA1() {
+				opType := operation.GetTypeA1()
+				switch opType {
 				case prot.OpType_SEND_MESSAGE:
+					fallthrough
+				case prot.OpType_SEND_CONTENT:
 					fallthrough
 				case prot.OpType_RECEIVE_MESSAGE:
 					if message != nil {
+						if opType == prot.OpType_SEND_MESSAGE &&
+							(message.ContentType == prot.ContentType_VIDEO ||
+								message.ContentType == prot.ContentType_IMAGE) {
+							continue
+						}
 						if goline.client.Profile == nil {
 							var err error
 							goline.client, err = api.NewLineClient()
