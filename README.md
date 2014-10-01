@@ -3,7 +3,7 @@ Goline Naver Line for Linux
 
 ![Screenshot](https://raw.githubusercontent.com/CaryLorrk/goline/master/doc/screenshot.png)
 
-rogramming Language: Go
+Programming Language: Go
 
 Libraries: 
 * [Go-Gtk](https://github.com/mattn/go-gtk/)
@@ -12,10 +12,8 @@ Libraries:
 
 Path:  
 $HOME/.goline  
-$TEMP/
+$TEMP/goline
     
-Runtime Dependency: GTK 2.0
-
 TODO:  
 * Send File
 * Thumbnail
