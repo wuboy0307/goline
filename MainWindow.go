@@ -27,8 +27,9 @@ type MainWindow struct {
 
 	ChatWindows map[string]*ChatWindow
 
-	closeChan chan bool
-	reconnect uint
+	closeChan  chan bool
+	reconnect  uint
+	opRevision int64
 }
 
 func NewMainWindow(parent *LoginWindow) *MainWindow {
@@ -101,6 +102,10 @@ func (self *MainWindow) runPoll() {
 		default:
 			operations := self.fetchOperations()
 			for _, operation := range operations {
+				revision := operation.GetRevision()
+				if revision <= self.opRevision {
+					continue
+				}
 				self.reconnect = 0
 				message := operation.GetMessage()
 				opType := operation.GetTypeA1()
@@ -163,6 +168,7 @@ func (self *MainWindow) runPoll() {
 						}
 					}
 				}
+				self.opRevision = revision
 			}
 		}
 		time.Sleep(300 * time.Millisecond)
