@@ -1,6 +1,9 @@
 Goline Naver Line for Linux
 --------------------
 
+# Not maintained.
+# Migrate to [goline-gotk3](https://github.com/CaryLorrk/goline)
+
 ![Screenshot](https://raw.githubusercontent.com/CaryLorrk/goline/master/doc/screenshot.png)
 
 Programming Language: Go
@@ -24,7 +27,4 @@ TODO:
 * File Extension
 * More MIME Type
 * Auto Sync Friends
-
-Reference:
-* [Protocol](http://altrepo.eu/git/line-protocol.git)
 
