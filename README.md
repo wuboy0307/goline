@@ -2,7 +2,7 @@ Goline Naver Line for Linux
 --------------------
 
 # Not maintained.
-# Migrate to [goline-gotk3](https://github.com/CaryLorrk/goline)
+# Migrate to [goline-gotk3](https://github.com/CaryLorrk/goline-gotk3)
 
 ![Screenshot](https://raw.githubusercontent.com/CaryLorrk/goline/master/doc/screenshot.png)
 
